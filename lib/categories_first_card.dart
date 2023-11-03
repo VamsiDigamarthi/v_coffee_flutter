@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CategoriesFirstCard extends StatelessWidget {
   const CategoriesFirstCard(this.image, this.index, {super.key});
@@ -40,7 +41,7 @@ class CategoriesFirstCard extends StatelessWidget {
             ),
             Text(
               image.coffeeName,
-              style: TextStyle(
+              style: GoogleFonts.josefinSans(
                 fontSize: 17,
                 fontWeight: FontWeight.w600,
                 color: index == 0 ? Colors.white : Colors.black,

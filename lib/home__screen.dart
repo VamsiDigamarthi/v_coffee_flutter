@@ -3,6 +3,7 @@ import 'package:first/frequntli_widget.dart';
 import 'package:first/new_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -48,14 +49,14 @@ class HomeScreen extends StatelessWidget {
             child: SizedBox(
               height: 180,
               width: MediaQuery.of(context).size.width,
-              child: const Column(
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Center(
                     child: Text(
                       "Canvosh",
-                      style: TextStyle(
+                      style: GoogleFonts.josefinSans(
                         fontSize: 25,
                         fontWeight: FontWeight.w600,
                         color: Colors.red,
@@ -63,7 +64,7 @@ class HomeScreen extends StatelessWidget {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Row(
@@ -71,25 +72,25 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       Text(
                         "Have a nice day Vamsi",
-                        style: TextStyle(
+                        style: GoogleFonts.josefinSans(
                           fontSize: 25,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
                         ),
                       ),
-                      Icon(
+                      const Icon(
                         CupertinoIcons.bell_fill,
                         color: Colors.white,
                         size: 31,
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 5,
                   ),
                   Text(
                     "Good Coffee and Good Health",
-                    style: TextStyle(
+                    style: GoogleFonts.josefinSans(
                       fontSize: 13,
                       fontWeight: FontWeight.w500,
                       color: Colors.white,
@@ -137,9 +138,9 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(
                     height: 10,
                   ),
-                  const Text(
+                  Text(
                     "New Items",
-                    style: TextStyle(
+                    style: GoogleFonts.josefinSans(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),
@@ -160,9 +161,9 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(
                     height: 15,
                   ),
-                  const Text(
+                  Text(
                     "Frequently Orders",
-                    style: TextStyle(
+                    style: GoogleFonts.josefinSans(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),

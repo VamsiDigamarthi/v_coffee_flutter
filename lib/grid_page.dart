@@ -1,5 +1,6 @@
 import 'package:first/details_coffee.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class GridPage extends StatelessWidget {
   const GridPage({super.key, required this.image});
@@ -73,14 +74,14 @@ class GridPage extends StatelessWidget {
               ),
               Text(
                 image.firstName,
-                style: const TextStyle(
+                style: GoogleFonts.josefinSans(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               Text(
                 image.coffeeName,
-                style: const TextStyle(
+                style: GoogleFonts.josefinSans(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                   color: Colors.grey,
@@ -91,7 +92,7 @@ class GridPage extends StatelessWidget {
                 children: [
                   Text(
                     '\$ ${image.price}',
-                    style: const TextStyle(
+                    style: GoogleFonts.josefinSans(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                     ),

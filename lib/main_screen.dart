@@ -1,5 +1,6 @@
 import 'package:first/home__screen.dart';
 import 'package:first/menu_screen.dart';
+import 'package:first/my_card.dart';
 
 import 'package:flutter/material.dart';
 
@@ -20,10 +21,7 @@ class _MainScreenState extends State<MainScreen> {
       Icons.camera,
       size: 150,
     ),
-    Icon(
-      Icons.chat,
-      size: 150,
-    ),
+    MyCard(),
   ];
 
   @override

@@ -5,6 +5,7 @@ import 'package:first/grid_page.dart';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MenuScreen extends StatelessWidget {
   const MenuScreen({super.key});
@@ -39,15 +40,15 @@ class MenuScreen extends StatelessWidget {
               ),
             ),
           ),
-          const Positioned(
+          Positioned(
             top: 80,
             child: Padding(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                 left: 20,
               ),
               child: Text(
                 "Menu Items",
-                style: TextStyle(
+                style: GoogleFonts.josefinSans(
                   fontSize: 27,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
@@ -93,9 +94,9 @@ class MenuScreen extends StatelessWidget {
                   const SizedBox(
                     height: 10,
                   ),
-                  const Text(
+                  Text(
                     "Categories",
-                    style: TextStyle(
+                    style: GoogleFonts.josefinSans(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
                     ),

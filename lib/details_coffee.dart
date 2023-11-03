@@ -4,6 +4,105 @@ import 'package:flutter/material.dart';
 class DetailsCoffee extends StatelessWidget {
   const DetailsCoffee({super.key});
 
+  void _showBottomSheet(context) {
+    String milk = "v";
+    showModalBottomSheet(
+      isScrollControlled: true,
+      context: context,
+      builder: (context) {
+        return Container(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height * 0.95,
+          padding: const EdgeInsets.all(40),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text(
+                "Milk",
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              RadioListTile(
+                value: "Full-dot Milk",
+                title: const Text("Full-dot Milk"),
+                groupValue: milk,
+                onChanged: (value) {
+                  milk = value.toString();
+                },
+              ),
+              RadioListTile(
+                value: "Lovely free Milk",
+                title: const Text("Lovely free Milk"),
+                groupValue: milk,
+                onChanged: (value) {
+                  milk = value.toString();
+                },
+              ),
+              RadioListTile(
+                value: "Soy Milk",
+                title: const Text("Soy Milk"),
+                groupValue: milk,
+                onChanged: (value) {
+                  milk = value.toString();
+                },
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              const Text(
+                "Added Sugar",
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              RadioListTile(
+                value: "Small",
+                title: const Text("Small"),
+                groupValue: milk,
+                onChanged: (value) {
+                  milk = value.toString();
+                },
+              ),
+              RadioListTile(
+                value: "Medium",
+                title: const Text("Medium"),
+                groupValue: milk,
+                onChanged: (value) {
+                  milk = value.toString();
+                },
+              ),
+              RadioListTile(
+                value: "Large",
+                title: const Text("Large"),
+                groupValue: milk,
+                onChanged: (value) {
+                  milk = value.toString();
+                },
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  fixedSize: const Size(250, 50),
+                  backgroundColor: const Color.fromARGB(255, 25, 52, 99),
+                  foregroundColor: Colors.white,
+                ),
+                onPressed: () {},
+                child: const Text(
+                  "Save",
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,10 +144,15 @@ class DetailsCoffee extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     // crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      const Icon(
-                        Icons.arrow_back_ios_new_outlined,
-                        size: 26,
-                        color: Colors.white,
+                      IconButton(
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                        icon: const Icon(
+                          Icons.arrow_back_ios_new_outlined,
+                          size: 26,
+                          color: Colors.white,
+                        ),
                       ),
                       CircleAvatar(
                         radius: 20,
@@ -72,7 +176,7 @@ class DetailsCoffee extends StatelessWidget {
               child: SizedBox(
                 height: 300,
                 child: Image.asset(
-                  "assets/images/Rounton_Coffee_Roasters_Blog_Header_Image_1_3c9acb33-a112-424b-ac8b-38dd43283e76-removebg-preview-removebg-preview.png",
+                  "assets/images/cof.png",
                 ),
               ),
             ),
@@ -135,10 +239,12 @@ class DetailsCoffee extends StatelessWidget {
                       ),
                     ),
                     const Text(
-                      "A cappuccino is an espresso-based coffee drink that is traditionally prepared with steamed milk foam. Variations of the drink involve the use of cream instead of milk,",
+                      "A Cappuccino is an espresso-based coffee drink that is traditionally prepared with steamed milk foam. Variations of the drink involve the use of cream instead of milk,",
                       style: TextStyle(
-                        color: Colors.grey,
+                        color: Color.fromARGB(255, 86, 87, 88),
+                        fontSize: 20,
                       ),
+                      softWrap: true,
                     ),
                     const SizedBox(
                       height: 20,
@@ -250,8 +356,58 @@ class DetailsCoffee extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(255, 73, 73, 73),
                       ),
                     ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Total Price",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              "\$ 4.00",
+                              style: TextStyle(
+                                fontSize: 22,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 30,
+                              vertical: 10,
+                            ),
+                            backgroundColor:
+                                const Color.fromARGB(255, 38, 45, 61),
+                            foregroundColor: Colors.white,
+                            fixedSize: const Size(
+                              220,
+                              60,
+                            ),
+                          ),
+                          onPressed: () {
+                            _showBottomSheet(context);
+                          },
+                          child: const Text(
+                            "Add to cart",
+                          ),
+                        ),
+                      ],
+                    )
                   ],
                 ),
               ),

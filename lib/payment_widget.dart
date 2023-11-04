@@ -1,5 +1,6 @@
 import 'package:first/card_details.dart';
 import 'package:first/data/money_card.dart';
+import 'package:first/review_order.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -247,7 +248,13 @@ class PaymentWidget extends StatelessWidget {
                             ),
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => const ReviewOrder(),
+                            ),
+                          );
+                        },
                         child: Text(
                           "Go to Next",
                           style: GoogleFonts.josefinSans(

@@ -1,3 +1,4 @@
+import 'package:first/choose_cafe.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -91,7 +92,14 @@ class DetailsCoffee extends StatelessWidget {
                   backgroundColor: const Color.fromARGB(255, 25, 52, 99),
                   foregroundColor: Colors.white,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const ChooseCafe(),
+                    ),
+                  );
+                  // Navigator.of(context).pop();
+                },
                 child: const Text(
                   "Save",
                 ),
